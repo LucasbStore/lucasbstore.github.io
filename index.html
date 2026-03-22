@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Blog | Global Fitness Solutions</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { background-color: #121212; color: #f4f4f4; }
+        
+        header { background-color: #000; padding: 25px; text-align: center; border-bottom: 4px solid #ffcc00; }
+        header h1 { color: #ffcc00; font-size: 2.8rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 800; }
+        
+        .main-content { background-color: #1a1a1a; padding: 30px 15px; }
+        
+        .card { background-color: #222; padding: 25px; border-radius: 12px; border: 1px solid #333; margin-bottom: 30px; }
+        
+        .header-card { text-align: center; }
+        .header-card h2 { font-size: 2.4rem; color: #fff; margin-bottom: 12px; font-weight: 700; line-height: 1.2; }
+        .header-card p { color: #aaaaaa; font-size: 1.1rem; line-height: 1.5; }
+
+        .shop-section { padding: 40px 15px; background-color: #000; }
+        .shop-section h3 { font-size: 2rem; color: #ffcc00; margin-bottom: 25px; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
+
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+        .product-card { background-color: #1a1a1a; padding: 0; border-radius: 10px; border: 1px solid #333; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.7); border-color: #ffcc00; }
+
+        .product-image-wrapper { width: 100%; height: 250px; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: #fff; border-bottom: 1px solid #333;}
+        .product-image { max-width: 100%; max-height: 100%; object-fit: contain; padding: 15px; }
+
+        .product-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .product-card h4 { color: #fff; font-size: 1.3rem; margin-bottom: 8px; font-weight: 700; text-align: center; }
+        .product-card p { color: #aaaaaa; font-size: 0.95rem; line-height: 1.4; margin-bottom: 15px; text-align: center; flex-grow: 1; }
+
+        a.shop-now-btn { background-color: #ffcc00; color: #000; border: none; padding: 12px 20px; font-size: 1rem; font-weight: 700; cursor: pointer; border-radius: 4px; transition: background 0.3s; text-transform: uppercase; text-decoration: none; display: block; width: 100%; text-align: center;}
+        a.shop-now-btn:hover { background-color: #e6b800; }
+
+        .bmi-card { border-left: 6px solid #ffcc00; }
+        .bmi-card h3 { color: #ffcc00; font-size: 2rem; margin-bottom: 15px; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
+        .bmi-card p { color: #cccccc; margin-bottom: 25px; text-align: center; font-size: 1.05rem; }
+        
+        .input-group { margin-bottom: 20px; }
+        .input-group label { display: block; margin-bottom: 8px; color: #aaaaaa; font-weight: 600; font-size: 1.1rem; }
+        .input-group input { width: 100%; padding: 15px; border: none; border-radius: 6px; background-color: #fff; color: #333; font-size: 1.1rem; border: 2px solid #333; transition: border 0.3s;}
+        .input-group input:focus { border-color: #ffcc00; outline: none;}
+
+        button.calculate-btn { background-color: #ffcc00; color: #000; border: none; padding: 15px 30px; font-size: 1.2rem; font-weight: 800; cursor: pointer; border-radius: 6px; transition: background 0.3s, transform 0.2s; text-transform: uppercase; width: 100%; display: block;}
+        button.calculate-btn:hover { background-color: #e6b800; transform: scale(1.02); }
+        #bmi-result { margin-top: 20px; font-size: 1.3rem; font-weight: bold; color: #fff; text-align: center; }
+
+        footer { text-align: center; padding: 20px; background-color: #000; color: #555; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Iron Blog</h1>
+    </header>
+
+    <div class="main-content">
+        <div class="card header-card">
+            <h2>BUILD YOUR ULTIMATE PHYSIQUE</h2>
+            <p>Premium Supplements & Proven Methods. International Solutions for maximum hypertrophy.</p>
+        </div>
+    </div>
+
+    <div class="shop-section">
+        <h3>Top Rated Supplements</h3>
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://i.postimg.cc/Bn5J51w5/tsl_prod.png" alt="HydroLean XT Supplement" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h4>HydroLean XT</h4>
+                    <p>Advanced metabolic catalyst. Enhance your fat burning and boost your energy for intense workouts.</p>
+                    <a href="https://hydroleanxt.com/ds/go/indexvs.php#aff=LucasBrStore" class="shop-now-btn" target="_blank">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://i.postimg.cc/YCNtNmyQ/SPLUFK6Z.webp" alt="CleanseSana Detox" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h4>CleanseSana</h4>
+                    <p>Deep body cleanse with natural ingredients. Improve digestion and support healthy weight management.</p>
+                    <a href="https://myslimsana.com/slimsana-pdp-fe#aff=LucasBrStore" class="shop-now-btn" target="_blank">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://i.postimg.cc/4xvXvhFQ/3_bottle.png" alt="SonoVive Recovery" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h4>SonoVive Recovery</h4>
+                    <p>Deep sleep formula. Muscle grows during rest—optimize your recovery cycle for better gains.</p>
+                    <a href="https://sonovive24.com/text.php#aff=LucasBrStore" class="shop-now-btn" target="_blank">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://i.postimg.cc/x1G9GbFm/KGZQGAFD.webp" alt="MemoryFuel Brain Focus" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h4>MemoryFuel</h4>
+                    <p>Enhance memory and focus. The mind-muscle connection is the real secret of top athletes.</p>
+                    <a href="https://pinealguardianvip.com/ds/indexts.php#aff=LucasBrStore" class="shop-now-btn" target="_blank">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://i.postimg.cc/pXFWTSff/H99LI02W.webp" alt="ViriFlow Men's Health" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h4>ViriFlow Male Support</h4>
+                    <p>Clinically researched ingredients for prostate support and optimal urinary system health.</p>
+                    <a href="http://viriflow24.com/text.php#aff=LucasBrStore" class="shop-now-btn" target="_blank">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://i.postimg.cc/Y01tXGqX/Mega-Fitness-Bundle-Design-box.png" alt="Mega Fitness Bundle" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h4>Mega Fitness Bundle</h4>
+                    <p>The ultimate package of workout programs and nutrition guides for a complete transformation.</p>
+                    <a href="https://www.digistore24.com/redir/556945/LucasBrStore/" class="shop-now-btn" target="_blank">Shop Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="bmi-card card">
+            <h3>BMI Calculator</h3>
+            <p>Discover your Body Mass Index and align your fitness goals.</p>
+            
+            <div class="input-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Example: 85" step="0.1">
+            </div>
+            
+            <div class="input-group">
+                <label for="height">Height (m):</label>
+                <input type="number" id="height" placeholder="Example: 1.80" step="0.01">
+            </div>
+            
+            <button class="calculate-btn" onclick="calcularIMC()">Calculate My BMI</button>
+            <div id="bmi-result"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Iron Blog. Official Products by Distributor LucasBrStore.</p>
+    </footer>
+
+    <script>
+        function calcularIMC() {
+            let peso = parseFloat(document.getElementById('weight').value.replace(',', '.'));
+            let altura = parseFloat(document.getElementById('height').value.replace(',', '.'));
+            let resultadoDiv = document.getElementById('bmi-result');
+
+            if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
+                resultadoDiv.innerHTML = "<span style='color: #ff3333;'>Please enter valid values.</span>";
+                return;
+            }
+
+            let imc = peso / (altura * altura);
+            let classificacao = '';
+            let cor = '#ffcc00';
+
+            if (imc < 18.5) { classificacao = 'Underweight (Focus on caloric surplus diet!)'; cor = '#ffaa00'; }
+            else if (imc >= 18.5 && imc < 24.9) { classificacao = 'Normal weight (Time to focus on clean mass gains!)'; cor = '#00cc66'; }
+            else if (imc >= 25 && imc < 29.9) { classificacao = 'Overweight (Attention to body fat percentage)'; cor = '#ffaa00'; }
+            else { classificacao = 'Obesity (Consider combining cardio with strength training)'; cor = '#ff3333'; }
+
+            resultadoDiv.innerHTML = `Your BMI is <strong>${imc.toFixed(1)}</strong> <br> <span style="color: ${cor}; font-size: 1.1rem; display: inline-block; margin-top: 10px;">${classificacao}</span>`;
+        }
+    </script>
+</body>
+</html>
