@@ -38,18 +38,21 @@
         <h2>Contact Us</h2>
         <p class="subtitle">Have a question about our supplements or training programs? Send us a message.</p>
         
-          <form action="https://formsubmit.co/lucasbidutti2012@gmail.com" method="POST">
+        <form action="https://formsubmit.co/lucasbidutti2012@gmail.com" method="POST">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+            
             <div class="input-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Your Email Address" required>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
             </div>
             <div class="input-group">
                 <label for="message">Message</label>
-                <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
             </div>
             <button type="submit">Send Message</button>
         </form>
