@@ -6,10 +6,15 @@
     <title>Iron Blog | Global Fitness Solutions</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-        body { background-color: #121212; color: #f4f4f4; }
-        
-        header { background-color: #000; padding: 25px; text-align: center; border-bottom: 4px solid #ffcc00; }
-        header h1 { color: #ffcc00; font-size: 2.8rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 800; }
+        body { background-color: #121212; color: #f4f4f4
+
+                header { background-color: #000; padding: 15px 10px; text-align: center; border-bottom: 4px solid #ffcc00; display: flex; justify-content: center; align-items: center; }
+        header a { text-decoration: none; display: flex; align-items: center; justify-content: center; }
+        .logo-img {
+            max-height: 70px; /* Ajuste a altura do logo aqui */
+            width: auto; /* Mantém a proporção */
+            display: block;
+            margin: 0 auto;  }
         
         .main-content { background-color: #1a1a1a; padding: 30px 15px; }
         
@@ -57,9 +62,12 @@
 </head>
 <body>
 
-    <header>
-        <h1>Iron Blog</h1>
+        <header>
+        <a href="index.html">
+            <img src="https://i.postimg.cc/TPytZ1n2/lv-0-20260330093851.png" alt="Iron Blog Logo - Vertical Dumbbellsubstituted the I" class="logo-img">
+        </a>
     </header>
+
 
     <div class="main-content">
         <div class="card header-card">
